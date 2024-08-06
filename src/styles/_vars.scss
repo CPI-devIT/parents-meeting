@@ -1,13 +1,12 @@
 :root {
 	--color-white: #ffffff;
 	--color-black: #000000;
+	--color-blue-400: #213a76;
+	--color-blue-500: #2a327b;
+	--color-red-500: #be1622;
 
-	--font-family-roboto: 'Roboto';
+	--shadow-primary: 0 4px 24px 0 #213a7640;
+	--shadow-secondary: 0 1px 20px 0 #213a764d; // for header
 
-	--font-weight-light: 300;
-	--font-weight-regular: 400;
-	--font-weight-medium: 500;
-	--font-weight-semibold: 600;
-	--font-weight-bold: 700;
-	--font-weight-black: 900;
+	--font-main: 'Bahnschrift';
 }
