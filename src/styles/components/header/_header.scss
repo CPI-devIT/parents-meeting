@@ -1,13 +1,46 @@
 .header {
-	position: relative;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 2;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  padding: 25px 0 0;
 
-	&--fixed {
-		position: fixed;
-		transform: translateY(0);
-		transition: transform 0.35s ease-out;
-	}
+  &--fixed {
+    position: fixed;
+    transform: translateY(0);
+    transition: transform 0.35s ease-out;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 18px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 1px 21px 0 rgba(33, 58, 118, 0.3);
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item+.header__item {
+    margin-left: 78px;
+  }
+
+  &__item:last-child {
+    margin-right: 50px;
+  }
+
+  &__link {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    max-width: 341px;
+    width: 100%;
+  }
 }
