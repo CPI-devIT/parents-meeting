@@ -1,47 +1,59 @@
 .header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 2;
-  padding: 25px 0 0;
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+z-index: 2;
+padding: 25px 0 0;
 
-  &--fixed {
-    position: fixed;
-    transform: translateY(0);
-    transition: transform 0.35s ease-out;
+&--fixed {
+position: fixed;
+transform: translateY(0);
+transition: transform 0.35s ease-out;
+}
+
+&__nav {
+@include flex-center-sb;
+padding: 18px 18px;
+border-radius: 30px;
+background-color: var(--color-white);
+box-shadow: 0 1px 21px 0 rgba(33, 58, 118, 0.3);
+}
+
+&__items {
+display: flex;
+gap: 70px;
+}
+
+&__link {
+font-size: 20px;
+text-transform: uppercase;
+transition: opacity 0.4s, background-color 0.4s, text-decoration 0.4s;
+
+&:focus {
+    text-decoration: underline;
   }
 
-  &__nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    @extend %inner;
-  }
-
-  &__logo{
-    max-width: 172px;
-  }
-
-  &__items {
-    display: flex;
-  }
-
-  &__item{
-    &:not(:last-child) {
-        margin-right: 78px;
-      }
-
-    &:nth-last-child(2) {
-      margin-right: 30px;
+    &:hover {
+      opacity: 50%;
     }
+
+        &:active {
+          color: var(--color-red-500);
+          text-decoration: none;
+          opacity: 100%;
+        }
+}
+}
+
+.button {
+  transition: background-color 0.4s, opacity 0.4s,  ;
+  &:focus,
+  &:active {
+    background-color: var(--color-blue-400);
   }
 
-
-  &__link {
-    font-size: 20px;
-    text-transform: uppercase;
+  &:hover{
+    opacity: 50%;
   }
-
-
 }
