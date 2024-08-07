@@ -1,3 +1,7 @@
 .footer {
-    
+        background-color: var(--color-blue-400);
+
+        &__inner {
+          padding: 40px 70px;
+        }
 }
