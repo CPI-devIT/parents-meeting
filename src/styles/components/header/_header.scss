@@ -1,5 +1,5 @@
 .header {
-  position: relative;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -12,35 +12,36 @@
     transition: transform 0.35s ease-out;
   }
 
-  &__inner {
+  &__nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 18px 18px;
-    border-radius: 30px;
-    background-color: #fff;
-    box-shadow: 0 1px 21px 0 rgba(33, 58, 118, 0.3);
+    @extend %inner;
+  }
+
+  &__logo{
+    max-width: 172px;
   }
 
   &__items {
     display: flex;
   }
 
-  &__item+.header__item {
-    margin-left: 78px;
+  &__item{
+    &:not(:last-child) {
+        margin-right: 78px;
+      }
+
+    &:nth-last-child(2) {
+      margin-right: 30px;
+    }
   }
 
-  &__item:last-child {
-    margin-right: 50px;
-  }
 
   &__link {
     font-size: 20px;
     text-transform: uppercase;
   }
 
-  &__button {
-    max-width: 341px;
-    width: 100%;
-  }
+
 }
