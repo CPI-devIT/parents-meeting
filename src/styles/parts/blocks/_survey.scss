@@ -1,0 +1,40 @@
+.survey {
+  text-align: center;
+
+  &__content {
+    min-height: 400px;
+    background-image: url('../../img/bg/content-min-bg.jpg');
+    padding: 85px 75px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-text {
+      font-size:35px;
+      text-transform: uppercase;
+    }
+  }
+
+
+  &__content-btn{
+    padding: 24px 65px;
+    background-color: var(--color-blue-500);
+    color: var(--color-white);
+    border-radius: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 auto;
+    transition: opacity 0.4s, background-color 0.4s;
+
+    &:focus{
+      background-color: #be1622;
+    }
+
+    &:hover {
+      opacity: 50%;
+    }
+  }
+}
