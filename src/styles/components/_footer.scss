@@ -5,84 +5,97 @@ background-color: var(--color-blue-400);
 padding: 40px 70px;
 }
 
+&__logos {
+  display: flex;
+  gap: 70px;
+}
+
 &__top {
 display: flex;
 justify-content: space-between;
+margin-bottom: 50px;
 }
 
 &__logo-link {
 &:not(:last-child) {
 margin-right: 48px;
 }
-
 }
 
 &__contact {
 display: flex;
 flex-direction: column;
-gap: 35px;
+margin-bottom: 41px;
+
+&-item{
+  margin-bottom: 35px;
 }
 
-&__contact-link {
-font-size: 25px;
-color: var(--color-white);
-position: relative;
-transition: opacity 0.4s;
+&-link {
+  font-size: 25px;
+  color: var(--color-white);
+  position: relative;
+  transition: opacity 0.4s;
 
-&::before {
-content: " ";
-position: absolute;
-background-repeat: no-repeat;
-background-position: center;
-top: 0;
-left: -40px;
-background-size: cover;
+  &--phone {
+    &::before {
+      background-image: url('../../img/icons/phone.svg');
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &--mail {
+    &::before {
+      background-image: url('../img/icons/mail.svg');
+      width: 41px;
+      height: 28px;
+    }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: -40px;
+    background-size: cover;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: 50%;
+  }
+}
 }
 
-&:focus,
-&:hover {
-  opacity: 50%;
-}
-}
-
-&__contact-link--phone::before {
-background-image: url('../img/icons/phone.svg');
-width: 32px;
-height: 32px;
-}
-
-&__contact-link--mail::before {
-background-image: url('../img/icons/mail.svg');
-width: 41px;
-height: 28px;
-}
-
-&__social {
+.social {
 display: flex;
-margin-top: 41px;
 gap: 40px;
 
-&-item {
-background-size: 43px 43px;
-background-repeat: no-repeat;
-background-position: center;
-width: 43px;
-height: 43px;
-cursor: pointer;
+&-link {
+  background-size: 43px 43px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 43px;
+  height: 43px;
+  display: block;
 }
 }
 
 &__copy {
-display: flex;
-font-size: 20px;
-color: var(--color-white);
-gap: 10px;
-justify-content: center;
-margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: var(--color-white);
+  justify-content: center;
+
+  &-text {
+    margin-left: 10px;
+    border-left: 2px solid var(--color-white);
+    padding: 0 0 0 10px;
+  }
 }
 
-&__copy-link {
-border-right: 2px solid var(--color-white);
-padding-right: 10px;
-}
 }
