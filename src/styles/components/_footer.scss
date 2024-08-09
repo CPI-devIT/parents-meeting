@@ -1,38 +1,33 @@
 .footer {
-<<<<<<< HEAD
 background-color: var(--color-blue-400);
 
 &__inner {
-padding: 40px 70px;
+padding: 40px 50px;
 }
 
 &__logos {
   display: flex;
-  gap: 70px;
+  gap: 40px;
 }
 
 &__top {
 display: flex;
 justify-content: space-between;
 margin-bottom: 50px;
-}
-
-&__logo-link {
-&:not(:last-child) {
-margin-right: 48px;
-}
+gap: 48px;
 }
 
 &__contact {
 display: flex;
 flex-direction: column;
 margin-bottom: 41px;
+}
 
-&-item{
+&__item {
   margin-bottom: 35px;
 }
 
-&-link {
+&__link {
   font-size: 25px;
   color: var(--color-white);
   position: relative;
@@ -40,7 +35,7 @@ margin-bottom: 41px;
 
   &--phone {
     &::before {
-      background-image: url('../../img/icons/phone.svg');
+      background-image: url('../img/icons/phone.svg');
       width: 32px;
       height: 32px;
     }
@@ -59,8 +54,8 @@ margin-bottom: 41px;
     position: absolute;
     background-repeat: no-repeat;
     background-position: center;
-    top: 0;
-    left: -40px;
+    top: -5px;
+    left: -60px;
     background-size: cover;
   }
 
@@ -69,28 +64,32 @@ margin-bottom: 41px;
     opacity: 50%;
   }
 }
-}
 
-.social {
+.socials {
 display: flex;
 gap: 40px;
+margin-left: -60px;
 
-&-link {
+&__link {
   background-size: 43px 43px;
   background-repeat: no-repeat;
   background-position: center;
   width: 43px;
   height: 43px;
   display: block;
+  transition: opacity 0.4s;
+
+   &:focus,
+   &:hover {
+     opacity: 50%;
+   }
 }
 }
 
 &__copy {
-  display: flex;
-  justify-content: space-between;
   font-size: 18px;
   color: var(--color-white);
-  justify-content: center;
+  @include flex-all-center;
 
   &-text {
     margin-left: 10px;
@@ -98,7 +97,4 @@ gap: 40px;
     padding: 0 0 0 10px;
   }
 }
-
-=======
->>>>>>> main
 }
