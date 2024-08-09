@@ -1,0 +1,47 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  padding: 25px 0 0;
+
+  &--fixed {
+    position: fixed;
+    transform: translateY(0);
+    transition: transform 0.35s ease-out;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @extend %inner;
+  }
+
+  &__logo{
+    max-width: 172px;
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item{
+    &:not(:last-child) {
+        margin-right: 78px;
+      }
+
+    &:nth-last-child(2) {
+      margin-right: 30px;
+    }
+  }
+
+
+  &__link {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+
+}
