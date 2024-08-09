@@ -1,7 +1,100 @@
 .footer {
-        background-color: var(--color-blue-400);
+background-color: var(--color-blue-400);
 
-        &__inner {
-          padding: 40px 70px;
-        }
+&__inner {
+padding: 40px 50px;
+}
+
+&__logos {
+  display: flex;
+  gap: 40px;
+}
+
+&__top {
+display: flex;
+justify-content: space-between;
+margin-bottom: 50px;
+gap: 48px;
+}
+
+&__contact {
+display: flex;
+flex-direction: column;
+margin-bottom: 41px;
+}
+
+&__item {
+  margin-bottom: 35px;
+}
+
+&__link {
+  font-size: 25px;
+  color: var(--color-white);
+  position: relative;
+  transition: opacity 0.4s;
+
+  &--phone {
+    &::before {
+      background-image: url('../img/icons/phone.svg');
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &--mail {
+    &::before {
+      background-image: url('../img/icons/mail.svg');
+      width: 41px;
+      height: 28px;
+    }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -5px;
+    left: -60px;
+    background-size: cover;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: 50%;
+  }
+}
+
+.socials {
+display: flex;
+gap: 40px;
+margin-left: -60px;
+
+&__link {
+  background-size: 43px 43px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 43px;
+  height: 43px;
+  display: block;
+  transition: opacity 0.4s;
+
+   &:focus,
+   &:hover {
+     opacity: 50%;
+   }
+}
+}
+
+&__copy {
+  font-size: 18px;
+  color: var(--color-white);
+  @include flex-all-center;
+
+  &-text {
+    margin-left: 10px;
+    border-left: 2px solid var(--color-white);
+    padding: 0 0 0 10px;
+  }
+}
 }
