@@ -1,5 +1,5 @@
-import { disableScroll } from '../utils/_disable-scroll';
-import { enableScroll } from '../utils/_enable-scroll';
+import { disableScroll } from '../utils/_disable-scroll.js';
+import { enableScroll } from '../utils/_enable-scroll.js';
 
 export const burger = () => {
     const burgerButton = document.querySelector('[data-burger-button]');
@@ -35,8 +35,8 @@ export const burger = () => {
 
     menuLinks.forEach((el) => {
         el.addEventListener('click', () => {
-            burgerButton.classList.remove('burgerbutton-button--active');
-            menu.classList.remove('burgerbutton-menu--active');
+            burgerButton.classList.remove('burger-button--active');
+            menu.classList.remove('burger-menu--active');
             overlay.classList.remove('overlay--active');
             enableScroll();
         });

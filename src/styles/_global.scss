@@ -1,9 +1,9 @@
 body {
-	color: var(--color-blue-500);
+	font-family: var(--font-main), 'Arial', sans-serif;
 	font-weight: 700;
 	font-size: 35px;
-	font-family: var(--font-main), Arial, sans-serif;
 	line-height: 1.3;
+	color: var(--color-blue-500);
 	background-color: var(--color-white);
 	scroll-behavior: smooth;
 
@@ -21,11 +21,11 @@ body {
 }
 
 .container {
-	width: 100%;
 	margin: 0 auto;
 	padding: 0 60px;
+	width: 100%;
 
-	@include mq(lg) {
+	@include mq(xl) {
 		padding: 0 16px;
 	}
 }
@@ -33,8 +33,8 @@ body {
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
 	overflow: hidden;
+	min-height: 100vh;
 }
 
 .main {
@@ -47,13 +47,16 @@ body {
 
 .button {
 	@include flex-all-center;
-	padding: 16px 32px;
+
 	border-radius: 18px;
-	text-transform: uppercase;
+	padding: 16px 32px;
 	font-weight: 700;
-	font-size: 20px;
+	font-size: 18px;
+	text-transform: uppercase;
 	color: var(--color-white);
-	transition: background-color 0.4s, opacity 0.4s;
+	transition:
+		background-color 0.4s,
+		opacity 0.4s;
 
 	&--primary {
 		background-color: var(--color-red-500);
@@ -69,63 +72,63 @@ body {
 		font-size: 14px;
 	}
 
-  &:focus,
-  &:active {
-    background-color: var(--color-blue-400);
-  }
+	&:focus,
+	&:active {
+		background-color: var(--color-blue-400);
+	}
 
-  &:hover{
-    opacity: 50%;
-  }
+	&:hover {
+		opacity: 50%;
+	}
 }
 
 .sr-only {
 	position: absolute;
+	clip-path: inset(100%);
+	overflow: hidden;
+	margin: 1px;
+	border: 0;
+	padding: 0;
 	width: 1px;
 	height: 1px;
-	margin: 1px;
-	padding: 0;
-	overflow: hidden;
 	white-space: nowrap;
-	border: 0;
 	clip: rect(0 0 0 0);
-	clip-path: inset(100%);
 }
 
 .disable-scroll {
 	position: relative;
 	position: fixed;
-	top: 0;
 	left: 0;
+	top: 0;
+	overflow: hidden;
 	width: 100%;
 	height: 100vh;
-	overflow: hidden;
 }
 
 .title,
 .subtitle {
+	text-align: center;
 	text-transform: uppercase;
 	color: var(--color-red-500);
-	text-align: center;
 }
 
 .title {
-	font-size: 45px;
 	margin-bottom: 44px;
 	font-weight: 600;
+	font-size: 45px;
 
 	@include mq(xl) {
 		font-size: 35px;
 	}
 
 	@include mq(md) {
-		font-size: 25px;
 		margin-bottom: 28px;
+		font-size: 25px;
 	}
 
 	@include mq(sm) {
-		font-size: 20px;
 		margin-bottom: 16px;
+		font-size: 20px;
 	}
 }
 
@@ -138,7 +141,6 @@ body {
 	}
 
 	@include mq(sm) {
-		font-size: 20px;
 		margin-bottom: 12px;
 		font-size: 20px;
 	}
@@ -147,6 +149,26 @@ body {
 .logo {
 	display: inline-block;
 	width: 100%;
+
+	&--mp {
+		height: 74px;
+		max-width: 360px;
+
+		@include mq(xl) {
+			height: 64px;
+			max-width: 172px;
+		}
+
+		@include mq(md) {
+			height: 48px;
+			max-width: 124px;
+		}
+
+		@include mq(sm) {
+			height: 30px;
+			max-width: 82px;
+		}
+	}
 
 	&__img {
 		width: 100%;
@@ -161,16 +183,16 @@ body {
 
 .overlay {
 	position: fixed;
-	top: 0;
 	left: 0;
+	top: 0;
 	z-index: -1;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(var(--color-black), 0.5);
+	background-color: var(--color-black);
 	opacity: 0;
 
 	&--active {
 		z-index: 4;
-		opacity: 1;
+		opacity: 0.4;
 	}
 }
