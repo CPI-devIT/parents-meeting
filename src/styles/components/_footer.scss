@@ -10,6 +10,26 @@ padding: 40px 50px;
   gap: 40px;
 }
 
+&__logo {
+    height: 128px;
+    max-width: 143px;
+
+    @include mq(xl) {
+      height: 100px;
+      max-width: 112px;
+    }
+
+    @include mq(md) {
+      height: 80px;
+      max-width: 90px;
+    }
+
+    @include mq(sm) {
+      height: 65px;
+      max-width: 75px;
+    }
+}
+
 &__top {
 display: flex;
 justify-content: space-between;
