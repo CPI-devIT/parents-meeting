@@ -1,24 +1,26 @@
 .burger-button {
-	--burger-width: 30px;
-	--burger-height: 30px;
-	--burger-line-height: 2px;
+	--burger-width: 26px;
+	--burger-height: 21px;
+	--burger-line-height: 3px;
+	--burger-border-radius: 4px;
+	--burger-color: var(--color-blue-500);
 
 	position: relative;
-	width: $burger-width;
-	height: $burger-height;
-	color: var(--color-black);
+	width: var(--burger-width);
+	height: var(--burger-height);
 
 	&::before,
 	&::after {
+		content: '';
 		position: absolute;
 		left: 0;
+		border-radius: var(--burger-border-radius);
 		width: 100%;
-		height: $burger-line-height;
-		background-color: currentColor;
+		height: var(--burger-line-height);
+		background-color: var(--burger-color);
 		transition:
 			transform 0.3s ease-in-out,
 			top 0.3s ease-in-out;
-		content: '';
 	}
 
 	&::before {
@@ -26,7 +28,7 @@
 	}
 
 	&::after {
-		top: calc(100% - $burger-line-height);
+		top: calc(100% - var(--burger-line-height));
 	}
 
 	@include mq(lg, min) {
@@ -35,11 +37,12 @@
 
 	&__line {
 		position: absolute;
-		top: 50%;
 		left: 0;
+		top: 50%;
+		border-radius: var(--burger-border-radius);
 		width: 100%;
-		height: $burger-line-height;
-		background-color: currentColor;
+		height: var(--burger-line-height);
+		background-color: var(--burger-color);
 		transform: translateY(-50%);
 		transition: transform 0.3s ease-in-out;
 	}
