@@ -1,48 +1,90 @@
 .questions{
-    margin-top: 200px;
-  &__top{
-    background-image: url('../../img/bg/minist-bg.jpg');
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-      min-height: 550px;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 45px 45px;
-      position: relative;
-      z-index: 1;
 
-      &::after{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: var(--color-blue-300);
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 30%;
-      }
-  }
+&__mp-light{
+max-width: 300px;
+height: 270px;
 
-  &__btn{
-    text-align: center;
-    font-size: 35px;
-    margin: 0 auto;
-    padding: 25px 35px;
-      border-radius: 18px;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--color-white);
-      background-color: rgba(224, 31, 45, 0.6);
-      transition: background-color 0.4s;
+@include mq(xl){
+max-width: 185px;
+height: 166px;
+}
 
-      &:focus,
-      &:hover {
-        background-color: rgba(190, 22, 34, 1);
-      }
-  }
+@include mq(md) {
+max-width: 114px;
+height: 102px;
+}
 
+@include mq(sm){
+max-width: 78px;
+height: 70px;
+}
+}
+
+&__top{
+background-image: url('../../img/bg/minist-bg.jpg');
+@include flex-column-sb;
+min-height: 850px;
+@include bg-cover;
+padding: 45px 45px;
+position: relative;
+z-index: 1;
+
+&::after{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+background-color: var(--color-blue-300);
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 30%;
+}
+
+@include mq(xl){
+min-height: 530px;
+}
+
+@include mq(md) {
+min-height: 440px;
+}
+
+@include mq(sm) {
+max-width: 330px;
+}
+}
+
+&__btn {
+text-align: center;
+font-size: 45px;
+margin: 0 auto;
+padding: 38px 48px;
+opacity: 60%;
+transition: opacity 0.4s;
+
+&:focus,
+&:hover {
+opacity: 100%;
+}
+
+@include mq(xl) {
+font-size: 35px;
+padding: 25px 35px;
+}
+
+@include mq(md) {
+font-size: 25px;
+padding: 22px 55px;
+}
+
+@include mq(sm) {
+font-size: 15px;
+padding: 15px 29px;
+}
 
 }
+
+}
+
+
+

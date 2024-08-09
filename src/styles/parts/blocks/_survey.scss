@@ -1,40 +1,73 @@
 .survey {
-  text-align: center;
+text-align: center;
 
-  &__content {
-    min-height: 400px;
-    background-image: url('../../img/bg/content-min-bg.jpg');
-    padding: 85px 75px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+&__content {
+background-image: url('../../img/bg/content-min-bg.jpg');
+padding: 142px 190px;
+@include bg-cover;
+@include flex-column-sb;
 
-    &-text {
-      font-size:35px;
-      text-transform: uppercase;
-    }
-  }
+@include mq(xl) {
+padding: 75px 70px;
+}
 
+@include mq(md) {
+padding: 60px 50px;
+}
 
-  &__content-btn{
-    padding: 24px 65px;
-    background-color: var(--color-blue-500);
-    color: var(--color-white);
-    border-radius: 18px;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 auto;
-    transition: opacity 0.4s, background-color 0.4s;
+@include mq(sm) {
+padding: 35px 27px;
+}
+}
+&__text {
+font-size: 45px;
+text-transform: uppercase;
+margin-bottom: 50px;
 
-    &:focus{
-      background-color: #be1622;
-    }
+@include mq(xl) {
+margin-bottom: 33px;
+font-size: 35px;
+}
 
-    &:hover {
-      opacity: 50%;
-    }
-  }
+@include mq(md) {
+margin-bottom: 25px;
+font-size: 18px;
+}
+
+@include mq(sm) {
+margin-bottom: 18px;
+font-size: 16px;
+}
+
+}
+
+&__content-btn{
+padding: 34px 140px;
+margin: 0 auto;
+font-size: 40px;
+transition: opacity 0.4s, background-color 0.4s;
+
+&:focus{
+background-color: #be1622;
+}
+
+&:hover {
+opacity: 50%;
+}
+
+@include mq(xl) {
+font-size: 30px;
+padding: 24px 65px;
+}
+
+@include mq(md) {
+font-size: 18px;
+padding: 12px 30px;
+}
+
+@include mq(sm) {
+font-size: 16px;
+padding: 11px 25px;
+}
+}
 }
