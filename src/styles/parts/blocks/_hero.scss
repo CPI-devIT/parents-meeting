@@ -1,0 +1,219 @@
+.hero {
+	@include bg-cover;
+
+	padding: 200px 0 80px;
+	background-image: url('../img/bg/hero-bg.svg');
+
+	@include mq(md) {
+		padding: 150px 0 40px;
+	}
+
+	@include mq(sm) {
+		padding: 120px 0 20px;
+	}
+
+	&__container {
+		margin: 0 auto;
+		padding: 16px;
+		max-width: 1640px;
+
+		@include mq(md) {
+			padding: 0;
+		}
+	}
+
+	&__decor {
+		@include bg-contain;
+
+		display: block;
+		margin-bottom: 130px;
+		background-image: url('../img/decor/hero-decor.svg');
+
+		@include mq(md) {
+			margin-bottom: 50px;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__circle {
+		@include bg-contain;
+
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 736px;
+		background-image: url('../img/sections/hero/circle.png');
+		aspect-ratio: 1;
+
+		@include mq(xl) {
+			max-width: 500px;
+		}
+
+		@include mq(lg) {
+			max-width: 400px;
+		}
+
+		@include mq(md) {
+			max-width: 300px;
+		}
+
+		@include mq(sm) {
+			max-width: 190px;
+		}
+	}
+
+	&__inner {
+		padding: 16px;
+	}
+
+	&__stream {
+		position: relative;
+		overflow: hidden;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 904px;
+		aspect-ratio: 1.9;
+
+		@include mq(lg) {
+			max-width: 600px;
+		}
+
+		@include mq(md) {
+			max-width: 468px;
+		}
+
+		@include mq(sm) {
+			max-width: 100%;
+		}
+	}
+
+	&__preview {
+		position: absolute;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		border-radius: 40px;
+		padding: 40px;
+		width: 100%;
+		height: 100%;
+		text-transform: uppercase;
+		color: var(--color-white);
+		background-image: url('../img/sections/hero/preview.jpg');
+		transition: transform 0.6s;
+		gap: 16px;
+
+		@include bg-cover;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			border-radius: inherit;
+			width: 100%;
+			height: 100%;
+			background-color: var(--color-blue-500);
+			opacity: 70%;
+		}
+
+		&--hidden {
+			transform: translateX(-100%);
+		}
+
+		@include mq(lg) {
+			gap: 8px;
+		}
+
+		@include mq(md) {
+			border-radius: 24px;
+			padding: 12px;
+		}
+
+		@include mq(sm) {
+			border-radius: 12px;
+			gap: 2px;
+		}
+	}
+
+	&__title {
+		position: relative;
+		align-self: flex-start;
+		padding-right: 44px;
+		font-size: 35px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: -6px;
+			width: 32px;
+			height: 32px;
+			background-image: url('../img/icons/arrow.svg');
+			transform: translateY(-50%);
+
+			@include bg-contain;
+
+			@include mq(xl) {
+				width: 22px;
+				height: 22px;
+			}
+
+			@include mq(sm) {
+				bottom: 0;
+				width: 8px;
+				height: 8px;
+			}
+		}
+
+		@include mq(xl) {
+			padding-right: 32px;
+			font-size: 22px;
+		}
+
+		@include mq(sm) {
+			padding-right: 14px;
+			font-size: 12px;
+		}
+	}
+
+	&__button {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 4;
+		border-radius: inherit;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__date {
+		font-weight: 400;
+		font-size: 25px;
+
+		@include mq(xl) {
+			font-size: 15px;
+		}
+
+		@include mq(sm) {
+			font-size: 10px;
+		}
+	}
+
+	&__video {
+		display: none;
+		width: 100%;
+		height: 100%;
+		transform: translateX(100%);
+		transition: transform 0.6s;
+
+		&--active {
+			display: flex;
+			transform: translateX(0);
+		}
+	}
+}

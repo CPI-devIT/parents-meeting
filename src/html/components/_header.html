@@ -11,7 +11,7 @@
             <a class="header__ask header__ask--mobile button button--primary" href="#">
                 Вопросы министру
             </a>
-            <ul class="header__items burger-menu" data-menu>
+            <ul class="header__items burger-menu" id="burger-menu" data-menu>
                 <li>
                     <a class="header__link" href="#" data-menu-link>
                         Опрос
@@ -33,8 +33,8 @@
                     </a>
                 </li>
             </ul>
-            <button class="burger-button" aria-label="Открыть меню" aria-expanded="false" data-burger-button>
-                <span class="burger-button__line"></span>
+            <button class="burger-button" aria-label="Открыть меню" aria-expanded="false" aria-controls="burger-menu" data-burger-button>
+                <span class="burger-button__line" aria-hidden></span>
             </button>
         </nav>
     </div>
