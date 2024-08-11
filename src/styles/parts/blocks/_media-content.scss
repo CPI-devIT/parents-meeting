@@ -1,6 +1,10 @@
 .media {
 position: relative;
 
+&--title{
+  margin-top: 70px;
+}
+
 &::before,
 &::after {
 content: '';
@@ -22,11 +26,11 @@ z-index: -1;
 
 &::after{
 background-image: url('../img/decor/line_dashed.svg');
-right: 0;
+right: -25px;
 top: -200px;
 width: 340px;
 height: 340px;
-z-index: -1;
+z-index:1;
 }
 
 &__inner {
