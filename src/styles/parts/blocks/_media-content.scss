@@ -1,0 +1,178 @@
+.media {
+position: relative;
+
+&::before,
+&::after {
+content: '';
+position: absolute;
+background-position: center;
+background-size: auto;
+background-repeat: no-repeat;
+}
+
+&::before{
+background-image: url('../img/decor/circle_dashed.svg');
+left: -55px;
+bottom: -60px;
+width: 800px;
+height: 800px;
+rotate: 27%;
+z-index: -1;
+}
+
+&::after{
+background-image: url('../img/decor/line_dashed.svg');
+right: 0;
+top: -200px;
+width: 340px;
+height: 340px;
+z-index: -1;
+}
+
+&__inner {
+padding: 41px 105px 105px;
+@include flex-center-sb;
+text-align: center;
+gap: 20px;
+
+@include mq(xl) {
+ padding: 41px 15px 75px;
+}
+
+@include mq(lg) {
+  display: block;
+  margin: 0 auto;
+}
+}
+
+&__title {
+margin-bottom: 30px;
+text-transform: uppercase;
+}
+
+&__video{
+max-width: 740px;
+width: 100%;
+
+@include mq(xl) {
+  max-width: 501px;
+}
+
+&-link{
+position: relative;
+max-width: 740px;
+height: 445px;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+display: block;
+margin-bottom: 20px;
+z-index: 0;
+cursor: pointer;
+
+@include mq(xl) {
+  max-width: 514px;
+  max-height: 301px;
+}
+
+&:after,
+&:before {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+content: '';
+z-index: -1;
+transition: opacity 0.4s;
+opacity: 0%;
+}
+
+&:hover::before,
+&:active::before {
+opacity: 60%;
+}
+
+&:before{
+background-color: var(--color-blue-400);
+}
+
+&::after {
+background-image: url('../img/icons/play-white.svg');
+top: 40%;
+left: 45%;
+max-width: 78px;
+max-height: 78px;
+
+@include mq(xl) {
+  top: 37%;
+  left: 42%;
+}
+}
+
+&:hover::after,
+&:active::after {
+opacity: 100%;
+}
+
+&:active::after {
+background-image: url('../img/icons/play-blue.svg');
+}
+}
+}
+
+&__photo{
+max-width: 900px;
+width: 100%;
+
+@include mq(xl) {
+ max-width: 613px;
+}
+
+&-items{
+gap: 10px;
+flex-wrap: wrap;
+display: flex;
+margin-bottom: 10px;
+}
+
+&-link {
+position: relative;
+width: 212px;
+height: 212px;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+display: block;
+margin-bottom: 10px;
+z-index: 0;
+cursor: pointer;
+
+@include mq(xl) {
+  width: 144px;
+  height: 144px;
+}
+
+&::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+transition: opacity 0.4s;
+background-color: var(--color-white);
+opacity: 0;
+z-index: -1;
+}
+
+&:hover::after,
+&:active::after {
+opacity: 50%;
+}
+}
+}
+}
