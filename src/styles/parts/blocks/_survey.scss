@@ -1,10 +1,27 @@
 .survey {
 text-align: center;
+background-image: url('../../img/bg/content-min-bg.jpg');
+@include bg-cover;
+
+&__container{
+  max-width: 1325px;
+  margin: 0 auto;
+
+  @include mq(xl) {
+     max-width: 1058px;
+  }
+
+  @include mq(md) {
+     max-width: 589px;
+  }
+
+  @include mq(sm) {
+     max-width: 340px;
+  }
+}
 
 &__content {
-background-image: url('../../img/bg/content-min-bg.jpg');
-padding: 142px 190px;
-@include bg-cover;
+padding: 140px 0;
 @include flex-column-sb;
 
 @include mq(xl) {
@@ -12,12 +29,9 @@ padding: 75px 70px;
 }
 
 @include mq(md) {
-padding: 60px 50px;
-}
-
-@include mq(sm) {
 padding: 35px 27px;
 }
+
 }
 &__text {
 font-size: 45px;
@@ -41,19 +55,11 @@ font-size: 16px;
 
 }
 
-&__content-btn{
+&__btn{
 padding: 34px 140px;
 margin: 0 auto;
 font-size: 40px;
-transition: opacity 0.4s, background-color 0.4s;
 
-&:focus{
-background-color: #be1622;
-}
-
-&:hover {
-opacity: 50%;
-}
 
 @include mq(xl) {
 font-size: 30px;
