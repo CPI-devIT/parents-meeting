@@ -1,9 +1,8 @@
 .questions{
 
-&__contain{
+&__container{
   position: relative;
-  max-width: 1956px;
-  min-height: 856px;
+  height: 100%;
   z-index: 0;
 
   &::after {
@@ -59,55 +58,51 @@ height: 70px;
 
 &__top{
 @include flex-column-sb;
-min-height: 850px;
-@include bg-cover;
+height: 850px;
 padding: 45px 10px 0;
 position: relative;
 z-index: 1;
 
 @include mq(xl){
-min-height: 530px;
+height: 530px;
 }
 
 @include mq(md) {
-min-height: 440px;
+height: 440px;
 }
 
 @include mq(sm) {
-min-height: 325px;
+height: 325px;
 padding: 15px 10px 0;
 }
 }
 
 &__logo{
   max-width: 300px;
-  max-height: 270px;
+  height: 270px;
 
   @include mq(xl) {
     max-width: 185px;
-    max-height: 165px;
+    height: 165px;
   }
 
   @include mq(md) {
     max-width: 115px;
-    max-height: 102px;
+    height: 102px;
   }
 
   @include mq(sm) {
     max-width: 78px;
-    max-height: 70px;
+    height: 70px;
   }
 }
 
 &__btn {
-text-align: center;
 background-color: var(--color-red-500);
 font-size: 45px;
 margin: 25px auto;
 padding: 38px 48px;
 opacity: 60%;
-cursor: pointer;
-transition: opacity 0.4s;
 
 &:focus,
 &:hover {
