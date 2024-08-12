@@ -54,14 +54,6 @@ gap: 40px;
   position: relative;
   transition: opacity 0.4s;
 
-   &--phone,
-     &--mail{
-      &::before{
-        width: 35px;
-        height: 35px;
-      }
-     }
-
   &--phone {
     &::before {
       background-image: url('../img/icons/phone.svg');
@@ -80,6 +72,8 @@ gap: 40px;
     top: -5px;
     left: -60px;
     @include bg-contain;
+     width: 35px;
+     height: 35px;
   }
 
   &:focus,
