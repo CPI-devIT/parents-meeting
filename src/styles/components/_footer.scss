@@ -37,15 +37,16 @@ margin-bottom: 50px;
 gap: 48px;
 }
 
-&__contact {
-display: flex;
-flex-direction: column;
-margin-bottom: 41px;
+&__contacts {
+@include flex-column-sb;
+gap: 40px;
 }
 
-&__item {
-  margin-bottom: 35px;
+&__items {
+  @include flex-column-sb;
+  gap: 35px;
 }
+
 
 &__link {
   font-size: 25px;
@@ -53,19 +54,23 @@ margin-bottom: 41px;
   position: relative;
   transition: opacity 0.4s;
 
+   &--phone,
+     &--mail{
+      &::before{
+        width: 35px;
+        height: 35px;
+      }
+     }
+
   &--phone {
     &::before {
       background-image: url('../img/icons/phone.svg');
-      width: 32px;
-      height: 32px;
     }
   }
 
   &--mail {
     &::before {
       background-image: url('../img/icons/mail.svg');
-      width: 41px;
-      height: 28px;
     }
   }
 
