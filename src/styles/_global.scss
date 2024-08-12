@@ -47,7 +47,6 @@ body {
 
 .button {
 	@include flex-all-center;
-
 	border-radius: 18px;
 	padding: 16px 32px;
 	font-weight: 700;
@@ -55,30 +54,38 @@ body {
 	text-transform: uppercase;
 	color: var(--color-white);
 	transition:
-		background-color 0.4s,
-		opacity 0.4s;
+	background-color 0.4s, opacity 0.4s;
 
 	&--primary {
 		background-color: var(--color-red-500);
+
+			&:focus,
+			&:active {
+			  background-color: var(--color-blue-400);
+			}
+
+			&:hover {
+			  opacity: 50%;
+			}
 	}
 
 	&--secondary {
 		background-color: var(--color-blue-500);
+		transition: opacity 0.4s, background-color 0.4s;
+
+		&:focus {
+		  background-color: #be1622;
+		}
+
+		&:hover {
+		  opacity: 50%;
+		}
 	}
 
 	@include mq(md) {
 		border-radius: 5px;
 		padding: 8px 16px;
 		font-size: 14px;
-	}
-
-	&:focus,
-	&:active {
-		background-color: var(--color-blue-400);
-	}
-
-	&:hover {
-		opacity: 50%;
 	}
 }
 
