@@ -28,6 +28,7 @@
 		display: block;
 		margin-bottom: 130px;
 		background-image: url('../img/decor/hero-decor.svg');
+		background-size: 96% 100%;
 
 		@include mq(md) {
 			margin-bottom: 50px;
