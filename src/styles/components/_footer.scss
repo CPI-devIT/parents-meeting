@@ -72,11 +72,9 @@ margin-bottom: 41px;
   &::before {
     content: " ";
     position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
     top: -5px;
     left: -60px;
-    background-size: cover;
+    @include bg-contain;
   }
 
   &:focus,
@@ -91,7 +89,7 @@ gap: 40px;
 margin-left: -60px;
 
 &__link {
-  background-size: 43px 43px;
+  background-size: 43px;
   background-repeat: no-repeat;
   background-position: center;
   width: 43px;
