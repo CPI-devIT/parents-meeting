@@ -150,6 +150,11 @@ body {
 	display: inline-block;
 	width: 100%;
 
+	&--npa {
+		height: 120px;
+		max-width: 180px;
+	}
+
 	&--mp {
 		height: 74px;
 		max-width: 360px;
@@ -202,7 +207,6 @@ body {
 }
 
 .overlay {
-	position: fixed;
 	left: 0;
 	top: 0;
 	z-index: -1;
@@ -212,6 +216,7 @@ body {
 	opacity: 0;
 
 	&--active {
+		position: fixed;
 		z-index: 4;
 		opacity: 0.4;
 	}
