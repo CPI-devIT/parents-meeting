@@ -1,204 +1,207 @@
 .media {
-position: relative;
+	position: relative;
 
-&__title{
-margin-top: 70px;
-}
+	&__title {
+		margin-top: 70px;
+	}
 
-&::before,
-&::after {
-content: '';
-position: absolute;
-background-position: center;
-background-size: auto;
-background-repeat: no-repeat;
-}
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
 
-&::before{
-background-image: url('../img/decor/circle_dashed.svg');
-left: -55px;
-bottom: -60px;
-width: 800px;
-height: 800px;
-rotate: 27%;
-z-index: -1;
+		@include bg-cover;
+	}
 
-}
+	&::before {
+		left: -55px;
+		bottom: -60px;
+		z-index: -1;
+		width: 800px;
+		height: 800px;
+		background-image: url('../img/decor/circle-dashed.svg');
+		rotate: 27%;
+	}
 
-&::after{
-background-image: url('../img/decor/line_dashed.svg');
-right: -25px;
-top: -200px;
-aspect-ratio: 1/1;
-height: 340px;
-z-index:1;
+	&::after {
+		right: -100px;
+		top: -285px;
+		z-index: 1;
+		width: 100%;
+		max-width: 340px;
+		background-image: url('../img/decor/line-dashed.svg');
+		transform: rotate(45deg);
+		aspect-ratio: 1/1;
 
-@include mq(xl) {
-max-width: 209px;
-height: 212px;
-right: 0;
-top: -146px;
-}
-}
+		@include mq(xl) {
+			right: 0;
+			top: -146px;
+			max-width: 209px;
+		}
+	}
 
-&__inner {
-padding: 41px 16px 105px;
-max-width: 1710px;
-margin: 0 auto;
-@include flex-center-sb;
-text-align: center;
-gap: 20px;
+	&__inner {
+		margin: 0 auto;
+		padding: 41px 16px 105px;
+		max-width: 1710px;
+		text-align: center;
+		gap: 20px;
 
-@include mq(xl) {
-padding: 41px 10px 75px;
-}
+		@include flex-center-sb;
 
-@include mq(lg) {
-display: block;
-margin: 0 auto;
-}
-}
+		@include mq(xl) {
+			padding: 41px 10px 75px;
+		}
 
-&__subtitle {
-color: var(--color-blue-500);
-margin-bottom: 30px;
-}
+		@include mq(lg) {
+			display: block;
+			margin: 0 auto;
+		}
+	}
 
-&__video{
-max-width: 740px;
-width: 100%;
-}
+	&__subtitle {
+		margin-bottom: 30px;
+		color: var(--color-blue-500);
+	}
 
-&__video-link {
-position: relative;
-width: 100%;
-height: 445px;
-display: block;
-z-index: 0;
+	&__video {
+		width: 100%;
+		max-width: 740px;
+	}
 
-@include mq(xl) {
-max-width: 514px;
-max-height: 301px;
-}
+	&__video-link {
+		position: relative;
+		z-index: 0;
+		display: block;
+		width: 100%;
+		height: 445px;
 
-&:after,
-&:before {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-@include bg-cover;
-content: '';
-transition: opacity 0.4s, background-color 0.4s, background-image 0.4s;
-opacity: 0;
-}
+		@include mq(xl) {
+			max-width: 514px;
+			max-height: 301px;
+		}
 
-&:hover,
-&:active {
-&::before {
-opacity: 60%;
-}
-}
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition:
+				opacity 0.4s,
+				background-color 0.4s,
+				background-image 0.4s;
 
-&:before {
-background-color: var(--color-blue-400);
-}
+			@include bg-cover;
+		}
 
-&::after {
-background-image: url('../img/icons/play-white.svg');
-top: 40%;
-left: 45%;
-max-width: 78px;
-max-height: 78px;
+		&:hover,
+		&:active {
+			&::before {
+				opacity: 60%;
+			}
+		}
 
-@include mq(xl) {
-top: 37%;
-left: 42%;
-}
-}
+		&::before {
+			background-color: var(--color-blue-400);
+		}
 
-&:hover,
-&:active {
-transition: opacity 0.4s;
+		&::after {
+			left: 45%;
+			top: 40%;
+			max-width: 78px;
+			max-height: 78px;
+			background-image: url('../img/icons/play-white.svg');
 
-&::after {
-opacity: 100%;
-}
-}
+			@include mq(xl) {
+				left: 42%;
+				top: 37%;
+			}
+		}
 
-&:active::after {
-background-image: url('../img/icons/play-blue.svg');
-}
-}
+		&:hover,
+		&:active {
+			transition: opacity 0.4s;
 
-&__video-img {
-object-fit: cover;
-width: 100%;
-}
+			&::after {
+				opacity: 100%;
+			}
+		}
 
-&__photos{
+		&:active::after {
+			background-image: url('../img/icons/play-blue.svg');
+		}
+	}
 
-width: 100%;
+	&__video-img {
+		width: 100%;
+		object-fit: cover;
+	}
 
-// @include mq(xl) {
-// max-width: 613px;
-// }
-}
+	&__photos {
+		width: 100%;
 
-&__items {
-gap: 20px;
-flex-wrap: wrap;
-display: flex;
+		// @include mq(xl) {
+		// max-width: 613px;
+		// }
+	}
 
-@include mq(xl) {
-gap: 10px;
-}
-}
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
 
-&__item {
-width: 212px;
-height: 212px;
+		@include mq(xl) {
+			gap: 10px;
+		}
+	}
 
-@include mq(xl) {
-width: 144px;
-height: 144px;
-}
-}
+	&__item {
+		width: 212px;
+		height: 212px;
 
-&__link {
-display: block;
-position: relative;
-z-index: 0;
+		@include mq(xl) {
+			width: 144px;
+			height: 144px;
+		}
+	}
 
-&::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-transition: opacity 0.4s;
-background-color: var(--color-white);
-opacity: 0;
-// z-index: -1;
-}
+	&__link {
+		position: relative;
+		z-index: 0;
+		display: block;
 
-&:hover,
-&:active {
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--color-white);
+			opacity: 0;
+			transition: opacity 0.4s;
 
-&::after {
-opacity: 50%;
-}
-}
-}
+			// z-index: -1;
+		}
 
-&__img {
-max-width: 212px;
-aspect-ratio: 1/1;
+		&:hover,
+		&:active {
+			&::after {
+				opacity: 50%;
+			}
+		}
+	}
 
-@include mq(xl) {
-max-width: 144px;
-}
-}
+	&__img {
+		max-width: 212px;
+		aspect-ratio: 1/1;
+
+		@include mq(xl) {
+			max-width: 144px;
+		}
+	}
 }
