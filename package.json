@@ -11,6 +11,7 @@
 		"styles": "gulp styles --production",
 		"zip": "gulp zip",
 		"fonts": "gulp fonts",
+		"resources": "gulp resources",
 		"images": "gulp buildImages --production",
 		"deploy": "gulp deploy",
 		"start": "serve \"./app\"",
