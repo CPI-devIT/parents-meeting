@@ -43,6 +43,8 @@ export const fonts = plugins.gulp.series(fontsTask);
 
 export const zip = plugins.gulp.series(zipTask);
 
+export const deploy = plugins.gulp.series(deployTask);
+
 export const resources = plugins.gulp.series(resourcesTask);
 
 export default development;
