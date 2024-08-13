@@ -1,0 +1,129 @@
+.contacts {
+  padding: 70px 50px;
+
+  @include mq(xl) {
+    padding: 50px 10px;
+  }
+
+  &__container {
+    max-width: 1800px;
+    padding: 50px 65px;
+    margin: 0 auto;
+    border-radius: 30px;
+    box-shadow: var(--shadow-secondary);
+    background-color: var(--color-white);
+
+      @include mq(md) {
+        padding: 50px 30px;
+      }
+
+      @include mq(sm) {
+        padding: 20px 15px;
+      }
+
+  }
+
+  &__title {
+
+    @include mq(xl) {
+      font-size: 25px;
+    }
+
+    @include mq(lg) {
+      margin-bottom:25px;
+    }
+
+     @include mq(md) {
+       font-size: 20px;
+     }
+
+     @include mq(sm) {
+       font-size: 10px;
+     }
+  }
+
+  &__inner {
+    @include flex-center-sb;
+    gap: 20px;
+
+    @include mq(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__map {
+    max-width: 1005px;
+    width: 100%;
+    height: 615px;
+    margin: auto;
+
+    @include mq(xl) {
+      max-width: 647px;
+      height: 397px;
+    }
+
+    @include mq(lg) {
+      max-width: 500px;
+      height: 310px;
+    }
+
+    @include mq(md) {
+      max-width: 570px;
+      height: 350px;
+    }
+
+    @include mq(sm) {
+      max-width: 500px;
+      height: 240px;
+    }
+
+  }
+
+  &__items{
+    @include flex-column-sb;
+    gap: 25px;
+    max-width: 600px;
+
+    @include mq(xl) {
+      gap: 15px;
+    }
+
+    @include mq(md) {
+      display: grid;
+      grid-template-columns: repeat(2, 215px);
+      grid-template-rows: repeat(3, 50px);
+      padding: 0 10px;
+    }
+
+     @include mq(sm) {
+       grid-template-rows: repeat(4, 50px);
+       grid-template-columns: repeat(1, 215px);
+     }
+  }
+
+  &__item{
+    font-size: 30px;
+
+    span{
+      font-weight: 800;
+      display: block;
+    }
+
+     @include mq(xl) {
+       font-size: 20px;
+     }
+
+     @include mq(lg) {
+       font-size: 16px;
+     }
+
+     @include mq(md) {
+       font-size: 12px;
+     }
+
+     @include mq(sm) {
+       font-size: 12px;
+     }
+
+  }
+}
