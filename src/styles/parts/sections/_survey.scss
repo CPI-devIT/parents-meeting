@@ -1,64 +1,55 @@
 .survey {
+	padding: 140px 0;
 	text-align: center;
+
 	// background-image: url('../img/bg/content-min-bg.jpg');
 	background-image: url('../img/bg/hero-bg.svg');
+
 	@include bg-cover;
-	padding: 140px 0;
 
 	@include mq(xl) {
-		padding: 75px 70px;
+		padding: 75px 0;
 	}
 
 	@include mq(md) {
-		padding: 35px 27px;
+		padding: 35px 0;
 	}
 
 	&__container {
-		max-width: 1325px;
 		margin: 0 auto;
 		padding: 0 15px;
-	}
+		max-width: 1325px;
 
-	&__content {
 		@include flex-column-sb;
-	}
-	&__title {
-		margin-bottom: 50px;
-		color: var(--color-blue-500);
 
-		@include mq(xl) {
-			margin-bottom: 33px;
-		}
+		gap: 40px;
 
 		@include mq(md) {
-			margin-bottom: 25px;
-			font-size: 18px;
+			gap: 20px;
 		}
+	}
 
-		@include mq(sm) {
-			margin-bottom: 18px;
+	&__title {
+		color: var(--color-blue-500);
+
+		@include mq(md) {
 			font-size: 16px;
 		}
 	}
 
 	&__btn {
-		padding: 34px 140px;
 		margin: 0 auto;
+		padding: 34px 140px;
 		font-size: 40px;
 
 		@include mq(xl) {
-			font-size: 30px;
 			padding: 24px 65px;
+			font-size: 30px;
 		}
 
 		@include mq(md) {
-			font-size: 18px;
-			padding: 12px 30px;
-		}
-
-		@include mq(sm) {
+			padding: 12px 26px;
 			font-size: 16px;
-			padding: 11px 25px;
 		}
 	}
 }
