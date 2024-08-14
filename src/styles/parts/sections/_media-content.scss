@@ -1,37 +1,52 @@
 .media {
 	position: relative;
+	padding-top: 60px;
 
-	&__title {
-		margin-top: 70px;
+	@include mq(lg) {
+		padding-top: 35px;
+	}
+
+	@include mq(lg) {
+		padding-top: 20px;
 	}
 
 	&::before,
 	&::after {
 		content: '';
 		position: absolute;
+		aspect-ratio: 1/1;
 
 		@include bg-cover;
 	}
 
 	&::before {
-		left: -55px;
-		bottom: -60px;
+		left: -7%;
+		top: 14%;
 		z-index: -1;
-		width: 800px;
-		height: 800px;
+		width: 30%;
 		background-image: url('../img/decor/circle-dashed.svg');
-		rotate: 27%;
+		transform: rotate(36deg);
+		aspect-ratio: 1/1;
+
+		@include mq(md) {
+			width: 40%;
+		}
+
+		@include mq(sm) {
+			left: -14%;
+			top: 8%;
+			width: 70%;
+		}
 	}
 
 	&::after {
-		right: -100px;
-		top: -285px;
+		right: -4%;
+		top: -33%;
 		z-index: 1;
 		width: 100%;
 		max-width: 340px;
 		background-image: url('../img/decor/line-dashed.svg');
 		transform: rotate(45deg);
-		aspect-ratio: 1/1;
 
 		@include mq(xl) {
 			right: 0;
@@ -41,117 +56,56 @@
 	}
 
 	&__inner {
-		margin: 0 auto;
-		padding: 41px 16px 105px;
-		max-width: 1710px;
+		display: flex;
+		justify-content: center;
 		text-align: center;
 		gap: 20px;
 
-		@include flex-center-sb;
-
-		@include mq(xl) {
-			padding: 41px 10px 75px;
-		}
-
 		@include mq(lg) {
-			display: block;
-			margin: 0 auto;
+			flex-direction: column;
 		}
 	}
 
 	&__subtitle {
 		margin-bottom: 30px;
 		color: var(--color-blue-500);
+
+		@include mq(sm) {
+			margin-bottom: 18px;
+		}
 	}
 
 	&__video {
-		width: 100%;
-		max-width: 740px;
+		@include mq(lg, min) {
+			align-self: flex-start;
+			width: 47%;
+		}
 	}
 
-	&__video-link {
+	&__iframe {
 		position: relative;
-		z-index: 0;
-		display: block;
+		padding-bottom: 54%;
 		width: 100%;
-		height: 445px;
 
-		@include mq(xl) {
-			max-width: 514px;
-			max-height: 301px;
-		}
-
-		&::after,
-		&::before {
-			content: '';
+		iframe {
 			position: absolute;
 			left: 0;
 			top: 0;
 			width: 100%;
 			height: 100%;
-			opacity: 0;
-			transition:
-				opacity 0.4s,
-				background-color 0.4s,
-				background-image 0.4s;
-
-			@include bg-cover;
 		}
-
-		&:hover,
-		&:active {
-			&::before {
-				opacity: 60%;
-			}
-		}
-
-		&::before {
-			background-color: var(--color-blue-400);
-		}
-
-		&::after {
-			left: 45%;
-			top: 40%;
-			max-width: 78px;
-			max-height: 78px;
-			background-image: url('../img/icons/play-white.svg');
-
-			@include mq(xl) {
-				left: 42%;
-				top: 37%;
-			}
-		}
-
-		&:hover,
-		&:active {
-			transition: opacity 0.4s;
-
-			&::after {
-				opacity: 100%;
-			}
-		}
-
-		&:active::after {
-			background-image: url('../img/icons/play-blue.svg');
-		}
-	}
-
-	&__video-img {
-		width: 100%;
-		object-fit: cover;
 	}
 
 	&__photos {
-		width: 100%;
-
-		// @include mq(xl) {
-		// max-width: 613px;
-		// }
+		@include mq(lg, min) {
+			width: 51%;
+		}
 	}
 
 	&__items {
 		display: flex;
 		flex-wrap: wrap;
+		width: 100%;
 		gap: 20px;
 
 		@include mq(xl) {
@@ -160,12 +114,11 @@
 	}
 
 	&__item {
-		width: 212px;
-		height: 212px;
+		width: 22.5%;
+		aspect-ratio: 1/1;
 
 		@include mq(xl) {
-			width: 144px;
-			height: 144px;
+			width: 23%;
 		}
 	}
 
@@ -173,6 +126,8 @@
 		position: relative;
 		z-index: 0;
 		display: block;
+		width: 100%;
+		height: 100%;
 
 		&::after {
 			content: '';
@@ -184,8 +139,6 @@
 			background-color: var(--color-white);
 			opacity: 0;
 			transition: opacity 0.4s;
-
-			// z-index: -1;
 		}
 
 		&:hover,
@@ -197,11 +150,8 @@
 	}
 
 	&__img {
-		max-width: 212px;
-		aspect-ratio: 1/1;
-
-		@include mq(xl) {
-			max-width: 144px;
-		}
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
