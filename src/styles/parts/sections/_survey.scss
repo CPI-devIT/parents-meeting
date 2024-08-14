@@ -1,0 +1,53 @@
+.survey {
+	padding: 140px 0;
+	text-align: center;
+	background-image: url('../img/bg/block-bg.svg');
+
+	@include bg-cover;
+
+	@include mq(xl) {
+		padding: 75px 0;
+	}
+
+	@include mq(md) {
+		padding: 35px 0;
+	}
+
+	&__container {
+		margin: 0 auto;
+		padding: 0 15px;
+		max-width: 1325px;
+
+		@include flex-column-sb;
+
+		gap: 40px;
+
+		@include mq(md) {
+			gap: 20px;
+		}
+	}
+
+	&__title {
+		color: var(--color-blue-500);
+
+		@include mq(md) {
+			font-size: 16px;
+		}
+	}
+
+	&__btn {
+		margin: 0 auto;
+		padding: 34px 140px;
+		font-size: 40px;
+
+		@include mq(xl) {
+			padding: 24px 65px;
+			font-size: 30px;
+		}
+
+		@include mq(md) {
+			padding: 12px 26px;
+			font-size: 16px;
+		}
+	}
+}
