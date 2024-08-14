@@ -1,164 +1,148 @@
 .footer {
-background-color: var(--color-blue-400);
+	padding: 40px 0;
+	background-color: var(--color-blue-400);
 
-&__inner {
-padding: 40px 50px;
-}
+	&__logos {
+		display: flex;
+		gap: 40px;
+	}
 
-&__logos {
-  display: flex;
-  gap: 40px;
-}
+	&__logo {
+		height: 128px;
+		max-width: 143px;
 
-&__logo {
-    height: 128px;
-    max-width: 143px;
+		@include mq(xl) {
+			height: 100px;
+			max-width: 112px;
+		}
 
-    @include mq(xl) {
-      height: 100px;
-      max-width: 112px;
-    }
+		@include mq(md) {
+			height: 80px;
+			max-width: 90px;
+		}
 
-    @include mq(md) {
-      height: 80px;
-      max-width: 90px;
-    }
+		@include mq(sm) {
+			height: 65px;
+			max-width: 75px;
+		}
+	}
 
-    @include mq(sm) {
-      height: 65px;
-      max-width: 75px;
-      margin-bottom: 60px;
-    }
-}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 60px;
+		gap: 48px;
 
-&__top {
-display: flex;
-justify-content: space-between;
-margin-bottom: 50px;
-gap: 48px;
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			margin-bottom: 44px;
+		}
+	}
 
+	&__contacts,
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
 
-@include mq(sm) {
-  display: block;
-  max-width: 250px;
-  margin: 0 auto 30px;
-}
-}
+		@include mq(sm) {
+			align-items: center;
+		}
+	}
 
-&__contacts {
-@include flex-column-sb;
-gap: 40px;
-}
+	&__items {
+		@include mq(sm) {
+			gap: 20px;
+		}
+	}
 
-&__items {
-  @include flex-column-sb;
-  gap: 35px;
+	&__link {
+		position: relative;
+		padding-left: 60px;
+		font-size: 35px;
+		color: var(--color-white);
+		transition: opacity 0.4s;
 
+		@include mq(xl) {
+			font-size: 25px;
+		}
 
-  @include mq(sm) {
-    align-items: center;
-  }
-}
+		@include mq(md) {
+			padding-left: 40px;
+			font-size: 16px;
+		}
 
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 36px;
+			height: 36px;
 
-&__link {
-  font-size: 35px;
-  color: var(--color-white);
-  position: relative;
-  transition: opacity 0.4s;
+			@include bg-contain;
 
-    @include mq(xl) {
-      font-size: 25px;
-    }
+			@include mq(sm) {
+				width: 22px;
+				height: 22px;
+			}
+		}
 
-    @include mq(md) {
-      font-size: 16px;
-    }
+		&--phone {
+			&::before {
+				background-image: url('../img/icons/phone.svg');
+			}
+		}
 
-    @include mq(sm) {
-      align-items: center;
-      font-size: 14px;
-    }
+		&--mail {
+			&::before {
+				background-image: url('../img/icons/mail.svg');
+			}
+		}
 
-  &--phone {
-    &::before {
-      background-image: url('../img/icons/phone.svg');
-    }
-  }
+		&:focus,
+		&:hover {
+			opacity: 50%;
+		}
+	}
 
-  &--mail {
-    &::before {
-      background-image: url('../img/icons/mail.svg');
-    }
-  }
+	&__bottom {
+		font-size: 30px;
+		text-align: center;
+		color: var(--color-white);
 
-  &::before {
-    content: " ";
-    position: absolute;
-    top: -5px;
-    left: -60px;
-    @include bg-contain;
-     width: 35px;
-     height: 35px;
-  }
+		@include mq(xl) {
+			font-size: 20px;
+		}
 
-  &:focus,
-  &:hover {
-    opacity: 50%;
-  }
+		@include mq(lg) {
+			font-size: 15px;
+		}
+
+		@include mq(sm) {
+			font-size: 10px;
+		}
+	}
 }
 
 .socials {
-display: flex;
-gap: 40px;
-margin-left: -60px;
+	display: flex;
+	gap: 40px;
 
-@include mq(sm) {
-  margin-left: 0;
-}
+	&__link {
+		display: block;
+		width: 44px;
+		height: 44px;
 
-&__link {
-  background-size: 43px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 43px;
-  height: 43px;
-  display: block;
-  transition: opacity 0.4s;
+		@include bg-contain;
 
-   &:focus,
-   &:hover {
-     opacity: 50%;
-   }
-}
-}
+		transition: opacity 0.4s;
 
-&__copy {
-  font-size: 30px;
-  color: var(--color-white);
-  @include flex-all-center;
-
-  &-text {
-    margin-left: 10px;
-    border-left: 2px solid var(--color-white);
-    padding: 0 0 0 10px;
-  }
-
-  @include mq(xl) {
-    font-size: 20px;
-  }
-
-  @include mq(lg) {
-    font-size: 15px;
-  }
-
-  @include mq(md) {
-    align-items: center;
-    font-size: 12px;
-  }
-
-  @include mq(sm) {
-     font-size: 10px;
-  }
-}
+		&:focus,
+		&:hover {
+			opacity: 50%;
+		}
+	}
 }
