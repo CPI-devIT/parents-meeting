@@ -1,5 +1,6 @@
 .hero {
 	@include bg-cover;
+	scroll-margin-top: 1em;
 
 	padding: 200px 0 80px;
 	background-image: url('../img/bg/block-bg.svg');
