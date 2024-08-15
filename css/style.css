@@ -1958,12 +1958,22 @@ html.with-fancybox body.hide-scrollbar {
   z-index: 1000;
   overflow: hidden auto;
   text-align: center;
-  background-color: rgba(var(--color-black), 0.7);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity var(--transition-time), visibility var(--transition-time);
   transition: opacity var(--transition-time), visibility var(--transition-time);
   cursor: pointer;
+}
+
+.graph-modal::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--color-black);
+  opacity: 0;
+  -webkit-transition: opacity var(--transition-time);
+  transition: opacity var(--transition-time);
 }
 
 .graph-modal::before {
@@ -1980,9 +1990,9 @@ html.with-fancybox body.hide-scrollbar {
   vertical-align: middle;
   margin: 50px auto;
   border-radius: 10px;
-  padding: 20px;
+  padding: 40px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 768px;
   text-align: left;
   background-color: var(--color-white);
   cursor: default;
@@ -1990,8 +2000,8 @@ html.with-fancybox body.hide-scrollbar {
 
 .graph-modal__close {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 16px;
+  top: 16px;
   padding: 0;
   width: 20px;
   height: 20px;
@@ -2004,6 +2014,10 @@ html.with-fancybox body.hide-scrollbar {
   visibility: visible;
   -webkit-transition: opacity var(--transition-time), visibility var(--transition-time);
   transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.graph-modal.is-open::after {
+  opacity: 0.5;
 }
 
 .graph-modal__container.graph-modal-open {
@@ -2564,7 +2578,7 @@ section {
 .media::after {
   right: -4%;
   top: -33%;
-  z-index: 1;
+  z-index: 0;
   width: 100%;
   max-width: 340px;
   background-image: url("../img/decor/line-dashed.svg");
@@ -2737,9 +2751,12 @@ section {
 }
 
 .survey__container {
+  position: relative;
+  z-index: 1;
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1325px;
+  gap: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2750,7 +2767,6 @@ section {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 40px;
 }
 
 .survey__title {
@@ -3133,6 +3149,7 @@ section {
 
 @media only screen and (max-width: 1199px) {
   .graph-modal__container {
+    padding: 20px;
     width: 90%;
   }
 
@@ -3188,7 +3205,7 @@ section {
   }
 
   .media::after {
-    right: 0;
+    right: -40px;
     top: -146px;
     max-width: 209px;
   }
@@ -3249,6 +3266,11 @@ section {
 }
 
 @media only screen and (max-width: 991px) {
+  .graph-modal__close {
+    right: 8px;
+    bottom: 8px;
+  }
+
   body {
     font-size: 20px;
   }

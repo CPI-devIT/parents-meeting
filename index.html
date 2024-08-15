@@ -16,7 +16,8 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Общероссийское родительское собрание 2024">
     <meta property="og:description" content="Общероссийское родительское собрание (ОРС) — это возможность получить обратную связь, услышать мнение родителей, оценить эффективность реализуемых проектов и программ">
-    <meta property="og:image" content="img/og-preview.png"> <!--perfect: 1200 * 630-->
+    <meta property="og:image" content="img/og-preview.png">
+    <!--perfect: 1200 * 630-->
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" sizes="32x32">
@@ -27,22 +28,53 @@
     <!-- stlyes, js -->
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                    return;
+                }
+            }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
+                .insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(98080939, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            ecommerce: "dataLayer"
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/98080939" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
 </head>
 
 <body class="body">
     <div class="wrapper">
 
+
 <header class="header">
     <div class="overlay" aria-hidden data-menu-overlay></div>
     <div class="container">
         <nav class="header__nav">
-            <a class="header__logo logo logo--mp" href="#hero">
+            <a class="header__logo logo logo--mp" href="https://edu.gov.ru" target="_blank">
                 <picture>
                     <source srcset="img/logo/logo-large.svg" media="(min-width: 1200px)">
                     <img class="logo__img" src="img/logo/logo.svg" alt="Логотип Министерства Просвещения Российской федерации ">
                 </picture>
             </a>
-            <a class="header__ask header__ask--mobile button button--primary" href="#question">
+            <a class="header__ask header__ask--mobile button button--primary" href="#questions">
                 Вопросы министру
             </a>
             <ul class="header__items burger-menu" id="burger-menu" data-menu>
@@ -62,7 +94,7 @@
                     </a>
                 </li>
                 <li class="header__ask header__ask--desk">
-                    <a class="button button--primary" href="#question">
+                    <a class="button button--primary" href="#questions">
                         Вопросы министру
                     </a>
                 </li>
@@ -73,10 +105,14 @@
         </nav>
     </div>
 </header>
+
 <div class="graph-modal">
     <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="question">
         <div class="graph-modal__box">
             <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+            <div class="graph-modal__content">
+                <iframe src="https://forms.yandex.ru/u/66bde2bf2530c235d8c59422/?iframe=1" frameborder="0" name="ya-form-66bde2bf2530c235d8c59422" width="100%"></iframe>
+            </div>
         </div>
     </div>
 </div>
@@ -159,7 +195,7 @@
         </div>
     </div>
 </section>
-    <section class="questions">
+    <section class="questions" id="questions">
     <img class="questions__img" src="img/sections/questions/minist.jpg" alt="Сергей Сергеевич Кравцов">
     <div class="questions__inner">
         <div class="questions__logo logo">
@@ -173,16 +209,18 @@
         </h2>
     </div>
 </section>
+
     <section class="survey" id="survey">
     <div class="survey__container">
         <h2 class="survey__title title">
             Мониторинг актуальных проблем в сфере воспитания и образования, волнующих детей и родителей
         </h2>
-        <button class="survey__btn button button--secondary" type="button">
+        <button class="survey__btn button button--secondary" type="button" data-graph-path="question">
             Пройти опрос
         </button>
     </div>
 </section>
+
     <section class="media" id="media">
     <div class="container">
         <h2 class="title">Медиаконтент</h2>
@@ -294,10 +332,10 @@
     <div class="container">
         <div class="footer__top">
             <div class="footer__logos">
-                <a class="footer__logo logo" href="#hero">
+                <a class="footer__logo logo" href="https://edu.gov.ru" target="_blank">
                     <img class="logo__img" src="img/logo/logo-mp-light.svg" alt="Логотип Министерства Просвещения Россйикой Федерации">
                 </a>
-                <a class="logo logo--npa" href="#">
+                <a class="logo logo--npa" href="https://nra-russia.ru" target="_blank">
                     <img class="logo__img" src="img/logo/logo-npa.svg" alt="Логотип Национальной Родительской Ассоциации">
                 </a>
             </div>
@@ -316,21 +354,21 @@
                 </ul>
                 <ul class="socials">
                     <li class="socials__item">
-                        <a class="socials__link" href="#" style="background-image: url('img/icons/socials/vk.svg');" target="_blank">
+                        <a class="socials__link" href="https://vk.com/minprosvet" style="background-image: url('img/icons/socials/vk.svg');" target="_blank">
                             <span class="sr-only">
                                 Вконтакте
                             </span>
                         </a>
                     </li>
                     <li class="socials__item">
-                        <a class="socials__link" href="#" style="background-image: url('img/icons/socials/odn.svg');" target="_blank">
+                        <a class="socials__link" href="https://ok.ru/minprosvet " style="background-image: url('img/icons/socials/odn.svg');" target="_blank">
                             <span class="sr-only">
                                 Одноклассники
                             </span>
                         </a>
                     </li>
                     <li class="socials__item">
-                        <a class="socials__link" href="#" style="background-image: url('img/icons/socials/tg.svg');" target="_blank">
+                        <a class="socials__link" href="https://t.me/minprosrf" style="background-image: url('img/icons/socials/tg.svg');" target="_blank">
                             <span class="sr-only">
                                 Телеграм
                             </span>
@@ -350,7 +388,9 @@
     </div>
 </footer>
 
+
 </div>
+<script src="https://forms.yandex.ru/_static/embed.js"></script>
 </body>
-  
+
 </html>
