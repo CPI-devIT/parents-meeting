@@ -10,3 +10,8 @@ new GraphModal('question');
 import {burger} from './templates/_burger.js'
 burger()
 
+//scroll
+$(".menu__btn, .menu a").on("click", function () {
+    $(".header__top-inner").toggleClass("header__top-inner--active");
+  });
+
