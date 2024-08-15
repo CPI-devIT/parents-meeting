@@ -14,13 +14,14 @@
 	}
 
 	&__container {
+		position: relative;
+		z-index: 1;
 		margin: 0 auto;
 		padding: 0 15px;
 		max-width: 1325px;
+		gap: 40px;
 
 		@include flex-column-sb;
-
-		gap: 40px;
 
 		@include mq(md) {
 			gap: 20px;

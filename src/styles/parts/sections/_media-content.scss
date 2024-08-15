@@ -42,14 +42,14 @@
 	&::after {
 		right: -4%;
 		top: -33%;
-		z-index: 1;
+		z-index: 0;
 		width: 100%;
 		max-width: 340px;
 		background-image: url('../img/decor/line-dashed.svg');
 		transform: rotate(45deg);
 
 		@include mq(xl) {
-			right: 0;
+			right: -40px;
 			top: -146px;
 			max-width: 209px;
 		}
