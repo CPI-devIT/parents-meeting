@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -37,33 +36,33 @@
     <div class="overlay" aria-hidden data-menu-overlay></div>
     <div class="container">
         <nav class="header__nav">
-            <a class="header__logo logo logo--mp" href="#">
+            <a class="header__logo logo logo--mp" href="#hero">
                 <picture>
-                    <source srcset="img/logo/logo-xxl.svg" media="(min-width: 1200px)">
+                    <source srcset="img/logo/logo-large.svg" media="(min-width: 1200px)">
                     <img class="logo__img" src="img/logo/logo.svg" alt="Логотип Министерства Просвещения Российской федерации ">
                 </picture>
             </a>
-            <a class="header__ask header__ask--mobile button button--primary" href="#">
+            <a class="header__ask header__ask--mobile button button--primary" href="#question">
                 Вопросы министру
             </a>
             <ul class="header__items burger-menu" id="burger-menu" data-menu>
                 <li>
-                    <a class="header__link" href="#" data-menu-link>
+                    <a class="header__link" href="#survey" data-menu-link>
                         Опрос
                     </a>
                 </li>
                 <li>
-                    <a class="header__link" href="#" data-menu-link>
+                    <a class="header__link" href="#media" data-menu-link>
                         Медиаконтент
                     </a>
                 </li>
                 <li>
-                    <a class="header__link" href="#" data-menu-link>
+                    <a class="header__link" href="#contacts" data-menu-link>
                         Контакты
                     </a>
                 </li>
                 <li class="header__ask header__ask--desk">
-                    <a class="button button--primary" href="#">
+                    <a class="button button--primary" href="#question">
                         Вопросы министру
                     </a>
                 </li>
@@ -74,10 +73,15 @@
         </nav>
     </div>
 </header>
-
-
+<div class="graph-modal">
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="question">
+        <div class="graph-modal__box">
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        </div>
+    </div>
+</div>
 <main class="main">
-  <section class="hero section">
+    <section class="hero" id="hero">
     <div class="hero__container">
         <h1 class="sr-only">
             11 общероссийское родительское собрание 2024
@@ -99,259 +103,254 @@
         </div>
     </div>
 </section>
-  <section class="about section">
-    <h2 class="about__title title">
-        Информация об ОРС 2024
-    </h2>
-    <div class="about__descr">
-        <div class="about__flag flag">
-            <div class="flag__top" aria-hidden>
-                <div class="flag__line"></div>
+    <section class="about">
+    <div class="about__wrapper">
+        <h2 class="about__title title">
+            Информация об ОРС 2024
+        </h2>
+        <div class="about__descr">
+            <div class="about__flag flag">
+                <div class="flag__top" aria-hidden>
+                    <div class="flag__line"></div>
+                </div>
+                <div class="flag__middle">
+                    <h3 class="flag__subtitle subtitle">
+                        дата проведения
+                    </h3>
+                </div>
+                <time class="flag__bottom" datetime="2024-08-28 12:00">
+                    28 августа 2024 г. 12:00 по Москве
+                </time>
             </div>
-            <div class="flag__middle">
-                <h3 class="flag__subtitle subtitle">
-                    дата проведения
-                </h3>
+            <div class="about__text">
+                <p>
+                        Ежегодно, начиная с 2014 года, <strong>Национальная родительская ассоциация и Министерство просвещения Российской Федерации</strong> проводят Общероссийское родительское собрание (ОРС). Это возможность получить обратную связь, услышать мнение родителей, оценить эффективность реализуемых проектов и программ, напрямую донести позицию Минпросвещения России по значимым темам и рассказать о нововведениях и перспективах. Для родителей это возможность услышать ответы на волнующие вопросы в сфере начального, основного и среднего общего образования.
+                    </p>
             </div>
-            <time class="flag__bottom" datetime="2024-08-28 12:00">
-                28 августа 2024 г. 12:00 по Москве
-            </time>
         </div>
-        <div class="about__text">
-            <p>
-                Ежегодно, начиная с 2014 года, <strong>Национальная родительская ассоциация и Министерство просвещения Российской Федерации</strong> проводят Общероссийское родительское собрание (ОРС). Это возможность получить обратную связь, услышать мнение родителей, оценить эффективность реализуемых проектов и программ, напрямую донести позицию Минпросвещения России по значимым темам и рассказать о нововведениях и перспективах. Для родителей это возможность услышать ответы на волнующие вопросы в сфере начального, основного и среднего общего образования.
-            </p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="about__info">
-            <div>
-                <h3 class="about__subtitle subtitle">
-                    Цели
-                </h3>
+        <div class="container">
+            <div class="about__info">
                 <div>
-                    <p>
+                    <h3 class="about__subtitle subtitle">
+                        Цели
+                    </h3>
+                    <div>
+                        <p>
                             Информирование референтных групп родителей (законных представителей) о предоставляемых системой образования возможностях, выявление актуальных проблем, а также предложений по их решению.
-                                        
+                                                
                         </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="about__subtitle subtitle">
+                        Задачи
+                    </h3>
+                    <ul>
+                        <li>
+                            совершенствование школьной ступени образования через открытый диалог с родительским сообществом.
+                        </li>
+                        <li>
+                            создание условий для организации проведения независимой оценки качества образовательной деятельности организаций, осуществляющих образовательную деятельность, в установленной сфере ведения.
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div>
-                <h3 class="about__subtitle subtitle">
-                    Задачи
+            <div class="about__line" aria-hidden></div>
+        </div>
+    </div>
+</section>
+    <section class="questions">
+    <img class="questions__img" src="img/sections/questions/minist.jpg" alt="Сергей Сергеевич Кравцов">
+    <div class="questions__inner">
+        <div class="questions__logo logo">
+            <img class="logo__img" src="img/logo/logo-mp-light.svg" alt="Логотип Министерства Просвещения Российской федерации ">
+        </div>
+        <h2 class="questions__title">
+
+            <button class="questions__btn button" type="button" data-graph-path="question">
+                Задать вопрос министру просвещения РФ
+            </button>
+        </h2>
+    </div>
+</section>
+    <section class="survey" id="survey">
+    <div class="survey__container">
+        <h2 class="survey__title title">
+            Мониторинг актуальных проблем в сфере воспитания и образования, волнующих детей и родителей
+        </h2>
+        <button class="survey__btn button button--secondary" type="button">
+            Пройти опрос
+        </button>
+    </div>
+</section>
+    <section class="media" id="media">
+    <div class="container">
+        <h2 class="title">Медиаконтент</h2>
+        <div class="media__inner">
+            <div class="media__video">
+                <h3 class="media__subtitle subtitle">
+                    Видео
                 </h3>
-                <ul>
-                    <li>
-                        совершенствование школьной ступени образования через открытый диалог с родительским сообществом.
+                <div class="media__iframe">
+                    <iframe src="https://vk.com/video_ext.php?oid=-30558759&id=456245671&hd=4&autoplay=1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="media__photos">
+                <h3 class="media__subtitle subtitle">
+                    Фото
+                </h3>
+                <ul class="media__items">
+                    <li class="media__item">
+                        <a class="media__link" data-fancybox="gallery" href="img/sections/media/1.jpg">
+                            <img class="media__img" src="img/sections/media/1.jpg" alt=" Фотография с мероприятия">
+                        </a>
                     </li>
-                    <li>
-                        создание условий для организации проведения независимой оценки качества образовательной деятельности организаций, осуществляющих образовательную деятельность, в установленной сфере ведения.
+                    <li class="media__item">
+                        <a class="media__link" data-fancybox="gallery" href="img/sections/media/2.jpg">
+                            <img class="media__img" src="img/sections/media/2.jpg" alt=" Фотография с мероприятия">
+                        </a>
+                    </li>
+                    <li class="media__item">
+                        <a class="media__link" data-fancybox="gallery" href="img/sections/media/3.jpg">
+                            <img class="media__img" src="img/sections/media/3.jpg" alt=" Фотография с мероприятия">
+                        </a>
+                    </li>
+                    <li class="media__item">
+                        <a class="media__link" data-fancybox="gallery" href="img/sections/media/4.jpg">
+                            <img class="media__img" src="img/sections/media/4.jpg" alt=" Фотография с мероприятия">
+                        </a>
+                    </li>
+                    <li class="media__item">
+                        <a class="media__link" data-fancybox="gallery" href="img/sections/media/5.jpg">
+                            <img class="media__img" src="img/sections/media/5.jpg" alt=" Фотография с мероприятия">
+                        </a>
+                    </li>
+                    <li class="media__item">
+                        <a class="media__link" data-fancybox="gallery" href="img/sections/media/6.jpg">
+                            <img class="media__img" src="img/sections/media/6.jpg" alt=" Фотография с мероприятия">
+                        </a>
+                    </li>
+                    <li class="media__item">
+                        <a class="media__link" data-fancybox="gallery" href="img/sections/media/7.jpg">
+                            <img class="media__img" src="img/sections/media/7.jpg" alt=" Фотография с мероприятия">
+                        </a>
+                    </li>
+                    <li class="media__item">
+                        <a class="media__link" data-fancybox="gallery" href="img/sections/media/8.jpg">
+                            <img class="media__img" src="img/sections/media/8.jpg" alt=" Фотография с мероприятия">
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
-  <section class="questions">
-  <div class="questions__container">
-    <img class="questions__img" src="img/bg/minist-bg.jpg" alt="Сергей Сергеевич Кравцов">
-    <div class="questions__inner">
-      <div class="questions__logo logo">
-        <img class="logo__img" src="img/logo/logo-mp-white-large.svg"
-          alt="Логотип Министерства Просвещения Российской федерации ">
-      </div>
-      <h2>
-        <button class="questions__btn button" type="button">
-            Задать вопрос министру просвещения РФ
-        </button>
-      </h2>
+    <section class="contacts" id="contacts">
+    <div class="container">
+        <div class="contacts__wrapper">
+            <h2 class="title">
+                Контакты национальной родительской ассоциации
+            </h2>
+
+            <div class="contacts__inner">
+                <div class="contacts__map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af9035ed40e2a3189003a720db23304f0e8ef094a3a7ca26a324f364d5c661f73&amp;source=constructor" frameborder="0"></iframe>
+                </div>
+                <ul class="contacts__items">
+                    <li class="contacts__item">
+                        <span>Адрес для корреспонденции:</span>
+                        105082, г. Москва, ул. Большая Почтовая, д. 36 стр. 10
+                    </li>
+                    <li class="contacts__item">
+                        <span>Фактический адрес:</span>
+                        111033, г. Москва, Волочаевская улица, 38 А, офис 317
+                    </li>
+                    <li class="contacts__item">
+                        <span>E-mail:</span>
+                        <a href="mailto:press@nra-russia.ru">
+                            press@nra-russia.ru
+                        </a>
+                    </li>
+                    <li class="contacts__item">
+                        <span>Телефон:</span>
+                        <a href="tel:+74953803067">
+                            +7 (495) 380-30-67
+                        </a>
+                    </li>
+                    <li class="contacts__item">
+                        <span>Пресс-центр:</span>
+                        <a href="tel:+79053658524">
+                            +7 (905) 365-85-24
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
-
-  <section class="survey">
-  <div class="survey__container">
-    <div class="survey__content">
-      <h2 class="survey__title title">
-        Мониторинг актуальных проблем в сфере воспитания и образования, волнующих детей и родителей
-      </h2>
-      <button class="survey__btn button button--secondary" type="button">
-        Пройти опрос
-      </button>
-    </div>
-  </div>
-</section>
-
-  <sections class="media">
-  <h2 class="title media__title">Медиаконтент</h2>
-  <div class="media__inner">
-    <div class="media__video">
-      <h3 class="media__subtitle subtitle">
-        Видео
-      </h3>
-        <a class="media__video-link" href="#">
-        <img class="media__video-img" src="img/media/video.jpg" alt=" Видео с мероприятия">
-        </a>
-    </div>
-    <div class="media__photos">
-      <h3 class="media__subtitle subtitle">
-        Фото
-      </h3>
-      <ul class="media__items">
-        <li class="media__item">
-        <a class="media__link" href="#">
-         <img class="media__img" src="img/media/1.jpg" alt=" Фотография с мероприятия">
-        </a>
-        </li>
-        <li class="media__item">
-        <a class="media__link" href="#">
-         <img class="media__img" src="img/media/2.jpg" alt=" Фотография с мероприятия">
-        </a>
-        </li>
-        <li class="media__item">
-        <a class="media__link" href="#">
-         <img class="media__img" src="img/media/3.jpg" alt=" Фотография с мероприятия">
-        </a>
-        </li>
-       <li class="media__item">
-        <a class="media__link" href="#">
-         <img class="media__img" src="img/media/4.jpg" alt=" Фотография с мероприятия">
-        </a>
-        </li>
-        <li class="media__item">
-        <a class="media__link" href="#">
-        <img class="media__img" src="img/media/5.jpg" alt=" Фотография с мероприятия">
-        </a>
-        </li>
-       <li class="media__item">
-        <a class="media__link" href="#">
-         <img class="media__img" src="img/media/6.jpg" alt=" Фотография с мероприятия">
-        </a>
-        </li>
-       <li class="media__item">
-        <a class="media__link" href="#">
-         <img class="media__img" src="img/media/7.jpg" alt=" Фотография с мероприятия">
-        </a>
-        </li>
-        <li class="media__item">
-        <a class="media__link" href="#">
-         <img class="media__img" src="img/media/8.jpg" alt=" Фотография с мероприятия">
-        </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</sections>
-
-  <section class="contacts">
-<div class="contacts__container">
-  <h2 class="contacts__title title">
-    Контакты национальной родительской ассоциации
-  </h2>
-
-  <div class="contacts__inner">
-  <div class="contacts__map">
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af9035ed40e2a3189003a720db23304f0e8ef094a3a7ca26a324f364d5c661f73&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-  </div>
-  <ul class="contacts__items">
-    <li class="contacts__item">
-      <span>Адрес для корреспонденции:</span>
-      105082, г. Москва, ул. Большая Почтовая, д. 36 стр. 10
-    </li>
-    <li class="contacts__item">
-      <span>Фактический адрес:</span>
-      111033, г. Москва, Волочаевская улица, 38 А, офис 317
-    </li>
-    <li class="contacts__item">
-      <span>E-mail:</span>
-      <a href="mailto:press@nra-russia.ru">
-        press@nra-russia.ru
-      </a>
-    </li>
-    <li class="contacts__item">
-      <span>Телефон:</span>
-      <a href="tel:+74953803067">
-        +7 (495) 380-30-67
-      </a>
-    </li>
-    <li class="contacts__item">
-      <span>Пресс-центр:</span>
-      <a href="tel:+79053658524">
-        +7 (905) 365-85-24
-      </a>
-    </li>
-  </ul>
-</div>
-</div>
-</section>
-
 </main>
 
 <footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__top">
-        <div class="footer__logos">
-          <a class="footer__logo logo " href="#">
-            <img src="img/logo/logo-mp-light.svg" alt="Логотип Министерства Просвещения Россйикой Федерации">
-          </a>
-          <a class="footer__logo logo logo--npa" href="#">
-            <img src="img/logo/logo-npa.svg" alt="Логотип Национальной Родительской Ассоциации">
-          </a>
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__logos">
+                <a class="footer__logo logo" href="#hero">
+                    <img class="logo__img" src="img/logo/logo-mp-light.svg" alt="Логотип Министерства Просвещения Россйикой Федерации">
+                </a>
+                <a class="logo logo--npa" href="#">
+                    <img class="logo__img" src="img/logo/logo-npa.svg" alt="Логотип Национальной Родительской Ассоциации">
+                </a>
+            </div>
+            <div class="footer__contacts">
+                <ul class="footer__items">
+                    <li>
+                        <a class="footer__link footer__link--phone" href="tel:+79053658524">
+                            +7 (905) 365-85-24
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer__link footer__link--mail" href="mailto:press@nra-russia.ru">
+                            press@nra-russia.ru
+                        </a>
+                    </li>
+                </ul>
+                <ul class="socials">
+                    <li class="socials__item">
+                        <a class="socials__link" href="#" style="background-image: url('img/icons/socials/vk.svg');" target="_blank">
+                            <span class="sr-only">
+                                Вконтакте
+                            </span>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link" href="#" style="background-image: url('img/icons/socials/odn.svg');" target="_blank">
+                            <span class="sr-only">
+                                Одноклассники
+                            </span>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link" href="#" style="background-image: url('img/icons/socials/tg.svg');" target="_blank">
+                            <span class="sr-only">
+                                Телеграм
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="footer__contacts">
-          <ul class="footer__items">
-            <li class="footer__item">
-            <a class="footer__link footer__link--phone" href="tel:+79053658524">
-              +7 (905) 365-85-24
+        <div class="footer__bottom">
+            <a href="#" target="_blank">
+                Политика конфиденциальности
             </a>
-            </li>
-            <li class="footer__item">
-            <a class="footer__link footer__link--mail" href="mailto:press@nra-russia.ru">
-              press@nra-russia.ru
-            </a>
-
-          </ul>
-          <ul class="socials">
-            <li class="socials__item">
-              <a class="socials__link" href="#" style="background-image: url('img/icons/socials/vk.svg');" target="_blank">
-                <span class="sr-only">
-                  Вконтакте
-                </span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link" href="#" style="background-image: url('img/icons/socials/odn.svg');" target="_blank">
-                <span class="sr-only">
-                  Одноклассники
-                </span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link" href="#" style="background-image: url('img/icons/socials/tg.svg');" target="_blank">
-                <span class="sr-only">
-                  Телеграм
-                </span>
-              </a>
-            </li>
-          </ul>
+            <span>
+                | © 2019 — 2024 Общероссийское родительское собрание. Все права защищены
+            </span>
         </div>
-      </div>
-      <div class="footer__copy">
-        <a class="footer__copy-link" href="#" target="_blank">
-          Политика конфиденциальности
-        </a>
-        <p class="footer__copy-text">
-          © 2019 — 2024 Общероссийское родительское собрание. Все права защищены
-        </p>
-      </div>
     </div>
-  </div>
 </footer>
-
 
 </div>
 </body>
   
 </html>
-
