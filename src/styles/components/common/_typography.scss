@@ -1,0 +1,40 @@
+.title,
+.subtitle {
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--color-red-500);
+}
+
+.title {
+	margin-bottom: 44px;
+	font-weight: 600;
+	font-size: 45px;
+
+	@include mq(xl) {
+		font-size: 35px;
+	}
+
+	@include mq(md) {
+		margin-bottom: 28px;
+		font-size: 25px;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 16px;
+		font-size: 20px;
+	}
+}
+
+.subtitle {
+	margin-bottom: 18px;
+	font-size: 40px;
+
+	@include mq(xl) {
+		font-size: 30px;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 12px;
+		font-size: 20px;
+	}
+}

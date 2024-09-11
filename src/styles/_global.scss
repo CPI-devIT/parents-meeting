@@ -1,0 +1,100 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-main), 'Arial', sans-serif;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 1.3;
+	color: var(--color-blue-500);
+	background-color: var(--color-white);
+
+	@include mq(xl) {
+		font-size: 24px;
+	}
+
+	@include mq(lg) {
+		font-size: 20px;
+	}
+
+	@include mq(md) {
+		font-size: 16px;
+	}
+}
+
+section {
+	scroll-margin-top: 130px;
+
+	@include mq(md) {
+		scroll-margin-top: 90px;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 60px;
+	width: 100%;
+
+	@include mq(xl) {
+		padding: 0 16px;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-height: 100vh;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+.sr-only {
+	position: absolute;
+	clip-path: inset(100%);
+	overflow: hidden;
+	margin: 1px;
+	border: 0;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
+	clip: rect(0 0 0 0);
+}
+
+.disable-scroll {
+	position: relative;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
+}
+
+.swiper-slide {
+	box-sizing: border-box;
+}
+
+.overlay {
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-black);
+	opacity: 0;
+
+	&--active {
+		position: fixed;
+		z-index: 4;
+		opacity: 0.4;
+	}
+}

@@ -1,0 +1,32 @@
+@mixin bg-cover {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@mixin bg-contain {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+@mixin resize-img {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@mixin image-set($pathToImage) {
+	background-image: url('#{$pathToImage}.jpg');
+	background-image: image-set(
+		'#{$pathToImage}.avif' type('image/avif'),
+		'#{$pathToImage}.webp' type('image/webp'),
+		'#{$pathToImage}.jpg' type('image/jpg')
+	);
+}
