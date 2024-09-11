@@ -1,0 +1,41 @@
+<header class="header">
+    <div class="overlay" aria-hidden data-menu-overlay></div>
+    <div class="container">
+        <nav class="header__nav">
+            <a class="header__logo logo logo--mp" href="https://edu.gov.ru" target="_blank">
+                <picture>
+                    <source srcset="img/logo/logo-large.svg" media="(min-width: 1200px)">
+                    <img class="logo__img" src="img/logo/logo.svg" alt="Логотип Министерства Просвещения Российской федерации ">
+                </picture>
+            </a>
+            <a class="header__ask header__ask--mobile button button--primary" href="#questions">
+                Вопросы министру
+            </a>
+            <ul class="header__items burger-menu" id="burger-menu" data-menu>
+                <li>
+                    <a class="header__link" href="#survey" data-menu-link>
+                        Опрос
+                    </a>
+                </li>
+                <li>
+                    <a class="header__link" href="#media" data-menu-link>
+                        Медиаконтент
+                    </a>
+                </li>
+                <li>
+                    <a class="header__link" href="#contacts" data-menu-link>
+                        Контакты
+                    </a>
+                </li>
+                <li class="header__ask header__ask--desk">
+                    <a class="button button--primary" href="#questions">
+                        Вопросы министру
+                    </a>
+                </li>
+            </ul>
+            <button class="burger-button" aria-label="Открыть меню" aria-expanded="false" aria-controls="burger-menu" data-burger-button>
+                <span class="burger-button__line" aria-hidden></span>
+            </button>
+        </nav>
+    </div>
+</header>
