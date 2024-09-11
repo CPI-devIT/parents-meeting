@@ -107,6 +107,7 @@
 		background-image: url('../img/sections/hero/preview2.jpg');
 		transition: transform 0.6s;
 		gap: 16px;
+    cursor: pointer;
 
 		@include bg-cover;
 
